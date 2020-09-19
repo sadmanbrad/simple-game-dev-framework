@@ -1,6 +1,8 @@
 #ifndef __B_GAME_WINDOW_HH__
 #define __B_GAME_WINDOW_HH__
+
 #include <SDL2/SDL.h>
+#include <string>
 
 class GameWindow
 {

@@ -1,4 +1,5 @@
 #include "Engine.hh"
+#include "Logger.hh"
 
 
 Engine::Engine() {
@@ -7,11 +8,7 @@ Engine::Engine() {
 
 void Engine::start() {
 	if (SDL_Init(SDL_INIT_VIDEO) != 0){
-		std::cout << "SDL_Init Error: " << SDL_GetError() << std::endl;
+		Logger::error(std::string("SDL_Init Error: ") + SDL_GetError());
 		return;
-	}
-	if (SDL_Init(SDL_INIT_VIDEO) != 0){
-		std::cout << "SDL_Init Error: " << SDL_GetError() << std::endl;
-		return 1;
 	}
 }
