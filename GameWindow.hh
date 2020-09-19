@@ -5,7 +5,7 @@
 class GameWindow
 {
 public:
-	GameWindow(string name, int width, int height);
+	GameWindow(std::string name, int width, int height);
 	~GameWindow();
 	
 	void render();
