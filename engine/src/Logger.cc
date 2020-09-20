@@ -12,10 +12,10 @@ static const std::string CYAN    = "\033[36m";
 static const std::string WHITE   = "\033[37m";
 static const std::string BOLD    = "\033[1m";
 
-static const std::string INFO_MESSAGE_PREFIX    = "INFO: ";
-static const std::string WARNING_MESSAGE_PREFIX = "WARN: ";
-static const std::string ERROR_MESSAGE_PREFIX   = "ERROR: ";
-static const std::string DEBUG_MESSAGE_PREFIX   = "DEBUG: ";
+static const std::string INFO_MESSAGE_PREFIX    = "[SGDF] INFO: ";
+static const std::string WARNING_MESSAGE_PREFIX = "[SGDF] WARN: ";
+static const std::string ERROR_MESSAGE_PREFIX   = "[SGDF] ERROR: ";
+static const std::string DEBUG_MESSAGE_PREFIX   = "[SGDF] DEBUG: ";
 
 static std::ostream& outStream = std::cout;
 static std::ostream& debugOutStream = std::cerr;

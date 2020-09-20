@@ -1,7 +1,10 @@
-#include "Logger.hh"
+#include "Engine.hh"
 
 int main(int argc, char const *argv[])
 {
-	Logger::info("Everything is working");
+	Engine engine;
+	engine.start();
+	engine.run();
+	engine.shutdown();
 	return 0;
 }
