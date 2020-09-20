@@ -12,7 +12,7 @@ LDFLAGS := -I$(INC_DIR) -I$(SGDF_INC_DIR) -l SDL2 -l SDL2_image -l SDL2_ttf -l S
 CPPFLAGS := -std=c++11 -I$(INC_DIR) -I$(SGDF_INC_DIR)
 CXXFLAGS := -MMD
 
-build: $(OBJ_DIR) game.out
+build: sgdf $(OBJ_DIR) game.out
 
 game.out: $(OBJ_FILES)
 	g++ -o $@ $^ $(LDFLAGS)
@@ -23,7 +23,7 @@ clean:
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cc $(INC_DIR)/%.hh
 	g++ $(CPPFLAGS) $(CXXFLAGS) -c -o $@ $<
 
-$(SGDF_DIR)/$(SGDF_OBJ_FILENAME):
+sgdf:
 	make -C $(SGDF_DIR)
 
 $(OBJ_DIR):
