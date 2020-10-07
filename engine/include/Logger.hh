@@ -1,5 +1,5 @@
-#ifndef __B_LOGGER_HH__
-#define __B_LOGGER_HH__
+#ifndef __SGDF_LOGGER_HH__
+#define __SGDF_LOGGER_HH__
 
 #include <string>
 

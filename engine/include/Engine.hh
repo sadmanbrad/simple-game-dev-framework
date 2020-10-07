@@ -1,5 +1,5 @@
-#ifndef __B_ENGINE_HH__
-#define __B_ENGINE_HH__
+#ifndef __SGDF_ENGINE_HH__
+#define __SGDF_ENGINE_HH__
 
 class Engine
 {
