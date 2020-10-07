@@ -9,8 +9,10 @@ class GameWindow
 public:
 	GameWindow(std::string name, int width, int height);
 	~GameWindow();
-	
-	void render();
+
+	friend class RenderingContext;
+private:
+	SDL_Window* window;
 };
 
 #endif
