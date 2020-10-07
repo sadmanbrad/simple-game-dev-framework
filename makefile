@@ -18,6 +18,7 @@ game.out: $(OBJ_FILES)
 	g++ -o $@ $^ $(LDFLAGS)
 
 clean: 
+	make -C $(SGDF_DIR) clean
 	rm -fr $(OBJ_DIR)/*.o $(OBJ_DIR)/*/*.o
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cc $(INC_DIR)/%.hh

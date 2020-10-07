@@ -1,6 +1,9 @@
 #ifndef __SGDF_ENGINE_HH__
 #define __SGDF_ENGINE_HH__
 
+#include "GameWindow.hh"
+#include "RenderingContext.hh"
+
 class Engine
 {
 public:
@@ -11,6 +14,10 @@ public:
 	void shutdown();
 
 private:
+	std::unique_ptr<GameWindow> window;
+	std::unique_ptr<RenderingContext> renderingContext;
+
+	void render();
 };
 
 #endif

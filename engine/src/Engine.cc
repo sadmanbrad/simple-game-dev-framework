@@ -42,9 +42,13 @@ void Engine::start() {
 		throw SgdfInitException(string("SDL_Mixer Error:") + Mix_GetError());
 	}
 	Logger::info("Engine started");
+	window = std::make_unique<GameWindow>("SGDF", 1280, 720);
+	renderingContext = std::make_unique<RenderingContext>(*window);
 }
 
 void Engine::run() {
+	render();
+	SDL_Delay(1000);
 }
 
 void Engine::shutdown() {
@@ -55,4 +59,8 @@ void Engine::shutdown() {
 	Mix_CloseAudio();
 	Mix_Quit();
 	SDL_Quit();
+}
+
+void Engine::render() {
+	
 }

@@ -4,7 +4,7 @@ OBJ_DIR := ./obj
 SRC_FILES := $(wildcard $(SRC_DIR)/*.cc)
 OBJ_FILES := $(patsubst $(SRC_DIR)/%.cc,$(OBJ_DIR)/%.o,$(SRC_FILES))
 LDFLAGS := -r
-CPPFLAGS := -std=c++11 -I$(INC_DIR)
+CPPFLAGS := -std=c++17 -I$(INC_DIR)
 CXXFLAGS := -MMD
 
 build: $(OBJ_DIR) sgdf.o

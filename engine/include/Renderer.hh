@@ -7,7 +7,7 @@
 class Renderer
 {
 public:
-	virtual ~Renderer() = 0;
+	virtual ~Renderer() = default;
 	
 	virtual void renderTo(RenderingContext& renderingContext, Rect targetArea) = 0;
 };
